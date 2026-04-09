@@ -1,38 +1,465 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&display=swap");
+
+/* ── ROOT ── */
+:root {
+  --cream: #f5f0e8;
+  --cream-light: #faf7f2;
+  --gold: #b8962e;
+  --gold-light: #d4af5a;
+  --gold-pale: #e8d5a0;
+  --text-dark: #2c2416;
+  --text-mid: #5a4a30;
+  --text-light: #8a7a60;
+  --radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+/* ── WRAPPER ── */
+.invitation-wrapper {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: var(--cream-light);
+  background-repeat: repeat;
+  background-size: 200px; /* prilagodi veličinu po želji */
+  height: 100%;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 48px 36px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ── HEADER ── */
+.header-section {
+  position: relative;
+  padding-top: 52px;
+  padding-bottom: 32px;
+  background: transparent;
+  margin-top: -280px; /* povuci tekst gore, ispod slike */
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.label-text {
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--text-light);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gold-line {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-light),
+    transparent
+  );
+  margin: 16px auto;
+}
+
+.gold-line.short {
+  width: 60px;
+}
+
+.name-script {
+  font-family: "Great Vibes", cursive;
+  font-size: 72px;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin: 4px 0;
+  z-index: 2;
+}
+
+.ampersand {
+  display: block;
+  font-family: "Great Vibes", cursive;
+  font-size: 36px;
+  color: var(--gold);
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.invite-text {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.8;
+  padding: 0 8px;
+}
+
+.quote-ref {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* ── RINGS DIVIDER ── */
+.rings-divider {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  padding: 8px 0 16px;
+  background: var(--cream-light);
+}
+
+.rings-img {
+  width: 120px; /* prilagodi veličinu */
+  height: auto;
+}
+
+/* ── DATE SECTION ── */
+.date-section {
+  padding: 36px 36px 28px;
+  background: var(--cream-light);
+}
+
+.section-label {
+  font-family: "Cinzel", serif;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  color: var(--text-light);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.date-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+/* ── INFO SECTION ── */
+.info-section {
+  padding: 32px 36px 40px;
+  background: var(--cream-light);
+}
+
+.event-block {
+  margin-bottom: 8px;
+}
+
+.event-label {
+  font-family: "Cinzel", serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-light);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.location-link {
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--text-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--gold-light);
+  transition: color 0.2s;
+}
+
+.location-link:hover {
+  color: var(--gold);
+}
+
+.confirm-note {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin: 20px 0 28px;
+}
+
+.confirm-note strong {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.contact-block {
+  margin-top: 8px;
+}
+
+.contact-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.9;
+}
+
+/* ── RSVP SECTION ── */
+.rsvp-section {
+  padding: 40px 32px 52px;
+  background: var(--cream-light);
+}
+
+.rsvp-form {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.field-group {
+  margin-bottom: 24px;
+}
+
+.field-label {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.text-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--gold-pale);
+  border-radius: var(--radius);
+  background: transparent;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 8px;
+}
+
+.text-input::placeholder {
+  color: var(--text-light);
+}
+
+.text-input:focus {
+  border-color: var(--gold);
+}
+
+.select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b8962e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+/* ── RADIO OPTIONS ── */
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border: 1px solid var(--gold-pale);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-mid);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  user-select: none;
+}
+
+.radio-option:hover {
+  border-color: var(--gold-light);
+}
+
+.radio-option.selected {
+  border-color: var(--gold);
+  background: rgba(184, 150, 46, 0.06);
+  color: var(--text-dark);
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--gold-light);
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.radio-option.selected .radio-circle {
+  border-color: var(--gold);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.radio-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ── SUBMIT BUTTON ── */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--text-light);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background: var(--text-mid);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ── SUCCESS MESSAGE ── */
+.success-message {
+  margin: 24px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-mid);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ── CLOSING ── */
+.closing-text {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-mid);
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.deco-corner-top {
+  position: relative;
+  height: 320px;
+  pointer-events: none;
+  overflow: visible;
+
+  z-index: 1;
+}
+
+.deco-corner-top img.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: auto;
+  opacity: 0.7;
+}
+
+.deco-corner-top img.right {
+  position: absolute;
+  top: 75%;
+  right: 5%;
+  width: 45%;
+  height: auto;
+  opacity: 0.7;
+  transform: rotate(25deg);
+}
+.deco-corner-top img.right2 {
+  position: absolute;
+  top: 55%;
+  right: 35%; /* pomakni lijevo od prve, prilagodi po želji */
+  width: 45%;
+  height: auto;
+  transform: scaleX(-1) rotate(155deg);
+  opacity: 0.7;
+}
+
+.page-1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-down {
+  text-align: center;
+  padding: 24px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.scroll-text {
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.scroll-arrow {
+  font-size: 32px;
+  color: var(--gold);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(6px);
   }
 }
