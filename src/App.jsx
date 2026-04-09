@@ -9,7 +9,6 @@ function App() {
   });
   const [companionCount, setCompanionCount] = useState(0);
   const [submitted, setSubmitted] = useState(false);
-  const [submissions, setSubmissions] = useState([]);
 
   const handleResponseChange = (value) => {
     setFormData((prev) => ({ ...prev, response: value, companions: [] }));
