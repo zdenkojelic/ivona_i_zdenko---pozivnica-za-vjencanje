@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
+const formClosed = new Date() > new Date("2026-05-30");
+
 function App() {
   const [formData, setFormData] = useState({
     name: "",
@@ -159,7 +161,9 @@ function App() {
         <div className="section rsvp-section">
           <p className="section-label">POTVRDITE DOLAZAK</p>
 
-          {!submitted ? (
+          {formClosed ? (
+            <p className="closed-text">Rok za prijave je istekao.</p>
+          ) : !submitted ? (
             <div className="rsvp-form">
               <div className="field-group">
                 <label className="field-label">Ime i prezime</label>

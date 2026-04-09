@@ -463,3 +463,12 @@ html {
     transform: translateY(6px);
   }
 }
+
+.closed-text {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-mid);
+  font-style: italic;
+  text-align: center;
+  margin: 24px 0;
+}
