@@ -70,7 +70,11 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const images = ["/src/assets/deco-corner.png", "/src/assets/rings.png"];
+    const images = [
+      "/src/assets/deco-corner.png",
+      "/src/assets/deco-rings.png",
+      "/src/assets/deco-bg.png",
+    ];
 
     let loadedCount = 0;
 
