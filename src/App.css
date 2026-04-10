@@ -472,3 +472,18 @@ html {
   text-align: center;
   margin: 24px 0;
 }
+
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream-light);
+}
+
+.loading-text {
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--text-light);
+}
