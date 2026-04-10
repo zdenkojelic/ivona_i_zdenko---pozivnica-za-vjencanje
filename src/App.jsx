@@ -159,7 +159,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="location-link"
                 >
-                  Crkva Uzvišenja BDM Osova
+                  Crkva Uznesenja BDM Osova
                 </a>
               </div>
 
@@ -189,8 +189,8 @@ function App() {
                 <p className="section-label">KONTAKTI</p>
                 <p className="contact-text">Ivona: +385 91 765 7951</p>
                 <p className="contact-text">Zdenko: +385 91 928 2018</p>
-                <p className="contact-text">Mira:</p>
-                <p className="contact-text">Marica:</p>
+                <p className="contact-text">Mira: +387 63 376 338</p>
+                <p className="contact-text">Marica: +385 91 558 7304</p>
               </div>
             </div>
 
@@ -222,7 +222,7 @@ function App() {
                     <label className="field-label">Vaš odgovor</label>
 
                     {[
-                      { value: "vjencanje", label: "Dolazim na vjenčanje" },
+                      { value: "vjencanje", label: "Dolazim" },
                       { value: "ne-dolazim", label: "Ne dolazim" },
                     ].map((opt) => (
                       <div
