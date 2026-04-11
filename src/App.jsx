@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import decoCorner from "./assets/deco-corner.png";
+import decoBg from "./assets/deco-bg.png";
+import ringsImg from "./assets/deco-rings.png";
 
 const formClosed = new Date() > new Date("2026-05-30");
 
@@ -70,11 +73,7 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const images = [
-      "/src/assets/deco-corner.png",
-      "/src/assets/deco-rings.png",
-      "/src/assets/deco-bg.png",
-    ];
+    const images = [decoCorner, decoBg, ringsImg];
 
     let loadedCount = 0;
 
@@ -105,9 +104,9 @@ function App() {
       ) : (
         <>
           <div className="deco-corner-top">
-            <img className="left" src="/deco-corner.png" alt="" />
-            <img className="right" src="/deco-bg.png" alt="" />
-            <img className="right2" src="/deco-bg.png" alt="" />
+            <img className="left" src={decoCorner} alt="" />
+            <img className="right" src={decoBg} alt="" />
+            <img className="right2" src={decoBg} alt="" />
             <div className="deco-diagonal" />
           </div>
           <div className="page-1">
@@ -134,7 +133,7 @@ function App() {
 
             {/* RINGS DIVIDER */}
             <div className="rings-divider">
-              <img src="/deco-rings.png" alt="prstenje" className="rings-img" />
+              <img src={ringsImg} alt="prstenje" className="rings-img" />
             </div>
             <div className="scroll-down" onClick={scrollToPage2}>
               <p className="scroll-text">VIŠE INFORMACIJA</p>
